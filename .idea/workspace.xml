@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f084fe3-43b9-4f27-b82b-a54b7d4c20a8" name="Default Changelist" comment="new database">
-      <change beforePath="$PROJECT_DIR$/theswitchmedia/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/theswitchmedia/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="7f084fe3-43b9-4f27-b82b-a54b7d4c20a8" name="Default Changelist" comment="new database" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +21,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theswitchmedia/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="270">
               <caret line="128" selection-start-line="128" selection-end-line="128" />
             </state>
           </provider>
@@ -146,7 +144,7 @@
       <workItem from="1597502158859" duration="711000" />
       <workItem from="1597509319651" duration="1872000" />
       <workItem from="1597512203562" duration="611000" />
-      <workItem from="1597528407963" duration="553000" />
+      <workItem from="1597528407963" duration="810000" />
     </task>
     <task id="LOCAL-00001" summary="new database">
       <created>1597509399003</created>
@@ -159,7 +157,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3747000" />
+    <option name="totallyTimeSpent" value="4004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -243,7 +241,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/theswitchmedia/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="270">
           <caret line="128" selection-start-line="128" selection-end-line="128" />
         </state>
       </provider>
