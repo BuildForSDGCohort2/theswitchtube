@@ -21,7 +21,9 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../theswitchmedia\templates" />
+        <option value="$MODULE_DIR$/../theswitchmedia/templates" />
+        <option value="$MODULE_DIR$/theswitch/templates" />
+        <option value="$MODULE_DIR$/theswitch/templates/theswitch" />
       </list>
     </option>
   </component>

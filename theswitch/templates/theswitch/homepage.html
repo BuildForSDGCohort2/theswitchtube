@@ -1,0 +1,14 @@
+{% extends 'theswitch/base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+    <div class="container">
+        <div class="jumbotron">
+          <h1 class="display-4">Hello There Welcome To THESWITCHTUBE</h1>
+          <p class="lead">Welcome To Latest Video and Audio Streaming Website</p>
+          <hr class="my-4">
+          <p>Click The Button Below to Enter TheSwitchTube.</p>
+          <a class="btn btn-primary btn-lg" href="{% url 'theswitch:home' %}" role="button">Click Me</a>
+        </div>
+    </div>
+{% endblock content %}
