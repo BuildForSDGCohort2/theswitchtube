@@ -1,1 +1,1 @@
-web: gunicorn theswitchtube.wsgi --log-file -
+web: gunicorn theswitchmedia.wsgi --log-file -
