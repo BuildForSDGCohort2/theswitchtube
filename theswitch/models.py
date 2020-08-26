@@ -24,10 +24,12 @@ class VideoPost(models.Model):
     """Post"""
     category = models.ForeignKey(VideoCategory, on_delete=models.CASCADE)
     header = models.CharField(max_length=100)
+    artist = models.CharField(max_length=100, blank=True)
+    title = models.CharField(max_length=100, blank=True)
     # file will be saved to MEDIA_ROOT/uploads/2015/01/30
     date = models.DateTimeField(auto_now=True)
     upload = models.FileField(upload_to='media/%Y/%m/%d/')
-    thumnail = models.FileField(upload_to='media', blank=True)
+    cover = models.FileField(upload_to='media', blank=True)
 
     def __str__(self):
         """Return the sting representation of the model"""
@@ -38,10 +40,12 @@ class AudioPost(models.Model):
     """Post"""
     category = models.ForeignKey(AudioCategory, on_delete=models.CASCADE)
     header = models.CharField(max_length=100)
+    artist = models.CharField(max_length=100, blank=True)
+    title = models.CharField(max_length=100, blank=True)
     # file will be saved to MEDIA_ROOT/uploads/2015/01/30
     date = models.DateTimeField(auto_now=True)
     upload = models.FileField(upload_to='media/%Y/%m/%d/')
-    thumnail = models.FileField(upload_to='media', blank=True)
+    cover = models.FileField(upload_to='media', blank=True)
 
     def __str__(self):
         """Return the sting representation of the model"""

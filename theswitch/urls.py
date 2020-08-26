@@ -8,5 +8,6 @@ app_name = 'theswitch'
 
 urlpatterns = [
     path('', views.homepage, name='homepage'),
-    path('home', views.home, name='home')
+    path('home', views.home, name='home'),
+    path('video/<int:video_id>', views.singlevideo, name='singelevid'),
 ]
