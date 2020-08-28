@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import VideoPost, VideoCategory, AudioPost, AudioCategory
+import random
 
 
 # Create your views here.
@@ -8,9 +9,9 @@ def homepage(request):
 
 
 def home(request):
-    audio = AudioPost.objects.order_by('upload')[:5]
+    audio = AudioPost.objects.order_by('-upload')[:5]
     video = VideoPost.objects.order_by('upload')[:5]
-    musics = AudioPost.objects.order_by('-upload')[:5]
+    musics = AudioPost.objects.order_by('upload')[:5]
     audio_cat = AudioCategory.objects.order_by('name')[0]
     audios = AudioCategory.objects.order_by('name')[1:5]
     context = {'audio': audio, 'video': video, 'audios': audios, 'audio_cat': audio_cat, 'musics': musics}
@@ -25,6 +26,14 @@ def singlevideo(request, video_id):
     videos = VideoPost.objects.order_by('?').first()
     context = {'video': video, 'video5': video_5, 'videos': videos}
     return render(request, 'theswitch/video-single.html', context)
+
+
+def music(request):
+    """Getting all Audios and Displaying Their Content"""
+    musics = AudioPost.objects.all()
+    musics2 = AudioPost.objects.order_by('-upload')[:4]
+    context = {'musics': musics,'music2': musics2}
+    return render(request, 'theswitch/music.html', context)
 
 
 

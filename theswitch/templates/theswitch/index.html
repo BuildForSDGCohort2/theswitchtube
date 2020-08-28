@@ -78,7 +78,7 @@
                 <i class="icon icon-layers-1 s-24"></i> <span>Categories</span>
             </a>
             <li>
-            <li><a class="ajaxifyPage" href="#">
+            <li><a class="ajaxifyPage" href="{% url 'theswitch:musicpage' %}">
                 <i class="icon icon-music-player-1 s-24"></i> <span>Music</span>
             </a>
             <li>
@@ -173,79 +173,22 @@
         </div>
         <div class="p-3">
             <ul id="playlist" class="playlist list-group">
+                {% for audios in audio %}
                 <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" data-wave="{% static 'assets/media/track1.json' %}" href="{% static 'assets/media/track1.mp3' %}">
+                    <a class="no-ajaxy media-url" data-wave="{{ audios.upload.url }}" href="{% static 'assets/media/track1.mp3' %}">
                         <div class="d-flex justify-content-between align-items-center">
                             <i class="icon-play s-28"></i>
                             <figure class="avatar-md float-left mr-3 mt-1">
-                                <img class="r-5" alt="" src="{% static 'assets/img/demo/a1.jpg' %}">
+                                <img class="r-5" alt="" src="{{ audios.cover.url }}">
                             </figure>
                             <div>
-                                <h6>alexander Pierce</h6>Atif Aslam
+                                <h6>{{ audios.title }}</h6>{{ audios.artist }}
                             </div>
-                            <span class="badge badge-primary badge-pill"> 5:03</span>
+                            <span class="badge badge-primary badge-pill"></span>
                         </div>
                     </a>
                 </li>
-                <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" data-wave="{% static "assets/media/track2.json" %}" href="{% static "assets/media/track2.mp3" %}" >
-                        <div class="d-flex justify-content-between align-items-center">
-                            <i class="icon-play s-28"></i>
-                            <figure class="avatar-md float-left mr-3 mt-1">
-                                <img class="r-5" alt="" src="{% static "assets/img/demo/a2.jpg" %}">
-                            </figure>
-                            <div>
-                                <h6>alexander Pierce</h6>Atif Aslam
-                            </div>
-                            <span class="badge badge-primary badge-pill"> 5:03</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track3.mp3' %}" data-wave="assets/media/track3.json">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <i class="icon-play s-28"></i>
-                            <figure class="avatar-md float-left mr-3 mt-1">
-                                <img class="r-5" src="{% static 'assets/img/demo/a4.jpg' %}" alt="">
-                            </figure>
-                            <div>
-                                <h6>alexander Pierce</h6>Atif Aslam
-                            </div>
-                            <span class="badge badge-primary badge-pill"> 5:03</span>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track1.mp3' %}" data-wave="{% static 'assets/media/track1.json' %}">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <i class="icon-play s-28"></i>
-                            <figure class="avatar-md float-left mr-3 mt-1">
-                                <img class="r-5" src="{% static 'assets/img/demo/a5.jpg' %}" alt="">
-                            </figure>
-                            <div>
-                                <h6>alexander Pierce</h6>Atif Aslam
-                            </div>
-                            <span class="badge badge-primary badge-pill"> 5:03</span>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track2.mp3' %}" data-wave="{% static 'assets/media/track2.json' %}">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <i class="icon-play s-28"></i>
-                            <figure class="avatar-md float-left mr-3 mt-1">
-                                <img class="r-5" src="{% static 'assets/img/demo/a6.jpg' %}" alt="">
-                            </figure>
-                            <div>
-                                <h6>alexander Pierce</h6>Atif Aslam
-                            </div>
-                            <span class="badge badge-primary badge-pill"> 5:03</span>
-                        </div>
-                    </a>
-                </li>
-
+                {% endfor %}
 
             </ul>
 
@@ -294,122 +237,10 @@
         <div class="searchOverlay__related">
             <div class="searchOverlay__suggestion">
                 <div class="card mb-3">
-                    <div class="card-header transparent b-b">
-                        <strong>New Artists</strong>
-                    </div>
-                    <ul class="playlist list-group list-group-flush">
-                        <li class="list-group-item">
-                            <div class="d-flex align-items-center">
-                                <div class="col-10">
-                                    <figure class="avatar avatar-md float-left  mr-3 mt-1">
-                                        <img src="{% static 'assets/img/demo/u1.jpg' %}" alt="">
-                                    </figure>
-                                    <h6>Zoe Foe</h6>
-                                    <small>5 Albums - 50 Songs</small>
-                                </div>
-                                <a href="#" class="ml-auto"><i class="icon-more"></i></a>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="d-flex align-items-center">
-                                <div class="col-10">
-                                    <figure class="avatar avatar-md float-left  mr-3 mt-1">
-                                        <img src="{% static 'assets/img/demo/u2.jpg' %}" alt="">
-                                    </figure>
-                                    <h6>Zoe Foe</h6>
-                                    <small>5 Albums - 50 Songs</small>
-                                </div>
-                                <a href="#" class="ml-auto"><i class="icon-more"></i></a>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="d-flex align-items-center">
-                                <div class="col-10">
-                                    <figure class="avatar avatar-md float-left  mr-3 mt-1">
-                                        <img src="{% static 'assets/img/demo/u3.jpg' %}" alt="">
-                                    </figure>
-                                    <h6>Zoe Foe</h6>
-                                    <small>5 Albums - 50 Songs</small>
-                                </div>
-                                <a href="#" class="ml-auto"><i class="icon-more"></i></a>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="d-flex align-items-center">
-                                <div class="col-10">
-                                    <figure class="avatar avatar-md float-left  mr-3 mt-1">
-                                        <img src="{% static 'assets/img/demo/u6.jpg' %}" alt="">
-                                    </figure>
-                                    <h6>Zoe Foe</h6>
-                                    <small>5 Albums - 50 Songs</small>
-                                </div>
-                                <a href="#" class="ml-auto"><i class="icon-more"></i></a>
-                            </div>
-                        </li>
-                    </ul>
+                    
                 </div>
             </div>
-            <div class="searchOverlay__suggestion">
-                <div class="card mb-3">
-                    <div class="card-header transparent b-b">
-                        <strong>Events</strong>
-                    </div>
-                    <ul class="playlist list-group list-group-flush">
-                        <li class="list-group-item">
-                            <div class="d-flex align-items-center ">
-                                <div class="col-8 ">
-                                    <a href="#">
-                                        <h6>Battal of Bands</h6>
-                                    </a>
-                                    <small class="mt-1"><i class="icon-placeholder-3 mr-1 "></i> London Music Hall
-                                    </small>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="text-lg-center  bg-primary r-10 p-2 text-white primary-bg">
-                                        <div class="s-18">24</div>
-                                        <small>July, 2019</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="d-flex align-items-center ">
-                                <div class="col-8 ">
-                                    <a href="#">
-                                        <h6>Battal of Bands</h6>
-                                    </a>
-                                    <small class="mt-1"><i class="icon-placeholder-3 mr-1 "></i> London Music Hall
-                                    </small>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="text-lg-center  bg-primary r-10 p-2 text-white primary-bg">
-                                        <div class="s-18">08</div>
-                                        <small>July, 2019</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="d-flex align-items-center ">
-                                <div class="col-8 ">
-                                    <a href="#">
-                                        <h6>Battal of Bands</h6>
-                                    </a>
-                                    <small class="mt-1"><i class="icon-placeholder-3 mr-1 "></i> London Music Hall
-                                    </small>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="text-lg-center  bg-primary r-10 p-2 text-white primary-bg">
-                                        <div class="s-18">12</div>
-                                        <small>July, 2019</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
 
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -424,7 +255,7 @@
             </a>
             <a class="navbar-brand d-none d-lg-block" href="index.html">
                 <div class="d-flex align-items-center s-14 l-s-2">
-                    <span>RECORD</span>
+                    <span>THESWITCH</span>
                 </div>
             </a>
         </div>
@@ -666,7 +497,7 @@
             <!--PlayList & Events-->
             <section class="section mt-4">
                 <div class="row row-eq-height">
-                    <div class="col-lg-12">
+                    <    class="col-lg-12">
                         <div class="card no-b mb-md-3 p-2">
                             <div class="card-header no-bg transparent">
                                 <div class="d-flex justify-content-between">
@@ -718,16 +549,16 @@
                                         <div class="card-body has-items-overlay playlist p-5">
                                             <div class="row">
                                                 <!-- Start -->
-
+                                                {% for audio in musics %}
                                                 <div class="col-md-3 mb-3">
                                                     <figure class="mb-2">
                                                         <div class="img-wrapper r-10">
-                                                            <img class=" r-10" src="{% static 'assets/img/demo/a7.jpg' %}"
+                                                            <img class=" r-10" src="{{ audio.cover.url }}"
                                                                  alt="/">
                                                             <div class="img-overlay text-white p-5">
                                                                 <div class="center-center">
                                                                     <a class="no-ajaxy media-url"
-                                                                       href="{% static 'assets/media/track2.mp3' %}" data-wave="{% static 'assets/media/track2.json' %}">
+                                                                       href="{{ audio.upload.url }}" data-wave="{% static 'assets/media/track2.json' %}">
                                                                         <i class="icon-play s-48"></i>
                                                                     </a>
                                                                 </div>
@@ -735,10 +566,11 @@
                                                         </div>
                                                     </figure>
                                                     <div class="figure-title">
-                                                        <h6>OG</h6>
-                                                        <small>Atif Aslam</small>
+                                                        <h6>{{ audio.title }}</h6>
+                                                        <small>{{ audio.artist }}</small>
                                                     </div>
                                                 </div>
+                                                {% endfor %}
 
                                                 <!-- END -->
                                         </div>
@@ -748,6 +580,8 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
             <!--@PlayLIst & Events-->
 
             <!--Recommend-->

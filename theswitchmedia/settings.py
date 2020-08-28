@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-import	django_heroku
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -83,6 +83,7 @@ WSGI_APPLICATION = 'theswitchmedia.wsgi.application'
 
 DATABASES = {
     'default': {
+        # mysql database
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'theswitchtube',
         'USER': 'root',
