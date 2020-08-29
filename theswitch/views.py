@@ -9,7 +9,7 @@ def homepage(request):
 
 
 def home(request):
-    audio = AudioPost.objects.order_by('-upload')[:5]
+    audio = AudioPost.objects.order_by('upload')[:5]
     video = VideoPost.objects.order_by('upload')[:5]
     musics = AudioPost.objects.order_by('upload')[:5]
     audio_cat = AudioCategory.objects.order_by('name')[0]
@@ -31,8 +31,7 @@ def singlevideo(request, video_id):
 def music(request):
     """Getting all Audios and Displaying Their Content"""
     musics = AudioPost.objects.all()
-    musics2 = AudioPost.objects.order_by('-upload')[:4]
-    context = {'musics': musics,'music2': musics2}
+    context = {'musics': musics}
     return render(request, 'theswitch/music.html', context)
 
 
