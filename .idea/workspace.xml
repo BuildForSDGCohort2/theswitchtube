@@ -36,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/video-single.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2975">
-              <caret line="175" column="24" selection-start-line="175" selection-start-column="24" selection-end-line="175" selection-end-column="24" />
+            <state relative-caret-position="224">
+              <caret line="583" column="17" lean-forward="true" selection-start-line="583" selection-start-column="17" selection-end-line="583" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -139,10 +139,10 @@
         <option value="$PROJECT_DIR$/theswitchmedia/settings.py" />
         <option value="$PROJECT_DIR$/theswitchmedia/urls.py" />
         <option value="$PROJECT_DIR$/theswitch/models.py" />
-        <option value="$PROJECT_DIR$/theswitch/templates/theswitch/index.html" />
         <option value="$PROJECT_DIR$/theswitch/urls.py" />
         <option value="$PROJECT_DIR$/theswitch/templates/theswitch/music.html" />
         <option value="$PROJECT_DIR$/theswitch/views.py" />
+        <option value="$PROJECT_DIR$/theswitch/templates/theswitch/index.html" />
       </list>
     </option>
   </component>
@@ -285,7 +285,7 @@
       <workItem from="1598044198090" duration="73609000" />
       <workItem from="1598598515116" duration="11471000" />
       <workItem from="1598709859136" duration="1927000" />
-      <workItem from="1598821650472" duration="776000" />
+      <workItem from="1598821650472" duration="3501000" />
     </task>
     <task id="LOCAL-00001" summary="new database">
       <created>1597509399003</created>
@@ -350,11 +350,18 @@
       <option name="project" value="LOCAL" />
       <updated>1598710527163</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="correction">
+      <created>1598865517659</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1598865517659</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138965000" />
+    <option name="totallyTimeSpent" value="141690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -364,7 +371,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32872504" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32872504" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -373,7 +380,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32872504" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32872504" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.21351767" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.31643626" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32872504" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -450,11 +457,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new database" />
-    <MESSAGE value="correction" />
     <MESSAGE value="corrections and update" />
     <MESSAGE value="homepage design" />
     <MESSAGE value="other pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="other pages" />
+    <MESSAGE value="correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/manage.py">
@@ -577,17 +584,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2975">
-          <caret line="175" column="24" selection-start-line="175" selection-start-column="24" selection-end-line="175" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/video-single.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="583" column="17" lean-forward="true" selection-start-line="583" selection-start-column="17" selection-end-line="583" selection-end-column="17" />
         </state>
       </provider>
     </entry>
