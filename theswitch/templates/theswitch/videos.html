@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static 'assets/img/basic/favicon.ico' %}" type="image/x-icon">
-    <title>The Switch Music</title>
+    <title>The Switch Videos</title>
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
 </head>
@@ -107,7 +107,6 @@
 
     </div>
 </aside>
-
 <!--Sidebar End-->
 
 <!-- Right Sidebar -->
@@ -120,6 +119,79 @@
         </div>
         <div class="p-3">
             <ul id="playlist" class="playlist list-group">
+                <li class="list-group-item my-1">
+                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track1.mp3' %}" data-wave="assets/media/track1.json">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <i class="icon-play s-28"></i>
+                            <figure class="avatar-md float-left mr-3 mt-1">
+                                <img class="r-5" src="{% static 'assets/img/demo/a1.jpg' %}" alt="">
+                            </figure>
+                            <div>
+                                <h6>alexander Pierce</h6>Atif Aslam
+                            </div>
+                            <span class="badge badge-primary badge-pill"> 5:03</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-group-item my-1">
+                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track2.mp3' %}" data-wave="assets/media/track2.json">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <i class="icon-play s-28"></i>
+                            <figure class="avatar-md float-left mr-3 mt-1">
+                                <img class="r-5" src="{% static 'assets/img/demo/a2.jpg' %}" alt="">
+                            </figure>
+                            <div>
+                                <h6>alexander Pierce</h6>Atif Aslam
+                            </div>
+                            <span class="badge badge-primary badge-pill"> 5:03</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-group-item my-1">
+                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track3.mp3' %}" data-wave="assets/media/track3.json">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <i class="icon-play s-28"></i>
+                            <figure class="avatar-md float-left mr-3 mt-1">
+                                <img class="r-5" src="{% static 'assets/img/demo/a4.jpg' %}" alt="">
+                            </figure>
+                            <div>
+                                <h6>alexander Pierce</h6>Atif Aslam
+                            </div>
+                            <span class="badge badge-primary badge-pill"> 5:03</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-group-item my-1">
+                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track1.mp3' %}"  data-wave="assets/media/track1.json">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <i class="icon-play s-28"></i>
+                            <figure class="avatar-md float-left mr-3 mt-1">
+                                <img class="r-5" src="{% static 'assets/img/demo/a5.jpg' %}" alt="">
+                            </figure>
+                            <div>
+                                <h6>alexander Pierce</h6>Atif Aslam
+                            </div>
+                            <span class="badge badge-primary badge-pill"> 5:03</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-group-item my-1">
+                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track2.mp3' %}" data-wave="assets/media/track2.json">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <i class="icon-play s-28"></i>
+                            <figure class="avatar-md float-left mr-3 mt-1">
+                                <img class="r-5" src="{% static 'assets/img/demo/a6.jpg' %}" alt="">
+                            </figure>
+                            <div>
+                                <h6>alexander Pierce</h6>Atif Aslam
+                            </div>
+                            <span class="badge badge-primary badge-pill"> 5:03</span>
+                        </div>
+                    </a>
+                </li>
+
 
             </ul>
 
@@ -166,7 +238,22 @@
     </div>
     <div class="searchOverlay__inner searchOverlay__inner--down">
         <div class="searchOverlay__related">
+            <div class="searchOverlay__suggestion">
+                <div class="card mb-3">
+                    <div class="card-header transparent b-b">
+                        <strong></strong>
+                    </div>
 
+                </div>
+            </div>
+            <div class="searchOverlay__suggestion">
+                <div class="card mb-3">
+                    <div class="card-header transparent b-b">
+                        <strong></strong>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -181,7 +268,7 @@
             </a>
             <a class="navbar-brand d-none d-lg-block" href="index.html">
                 <div class="d-flex align-items-center s-14 l-s-2">
-                    <span>THESWITCH</span>
+                    <span>THE SWITCH</span>
                 </div>
             </a>
         </div>
@@ -262,44 +349,61 @@
 </nav>
 <!--Page Content-->
 <main id="pageContent" class="page has-sidebar">
-
 <div class="container-fluid relative animatedParent animateOnce">
-        <div class="animated fadeInUpShort p-5 ml-lg-5 mr-lg-5">
-            <section>
-                <div class="relative mb-5">
-                    <h1 class="mb-2 text-primary">Musics</h1>
-                    <p>Enjoy our Wild Range Of Music</p>
-                </div>
-                <div class="row has-items-overlay">
-                    <div class="row playlist">
-                    <!-- Start -->
-                    {% for audio in musics %}
-                    <div class="col-md-3 mb-3">
-                        <figure class="mb-2">
-                            <div class="img-wrapper r-10">
-                                <img class=" r-10" src="{{ audio.cover.url }}"
-                                     alt="/">
-                                <div class="img-overlay text-white p-5">
-                                    <div class="center-center">
-                                        <a class="no-ajaxy media-url"
-                                           href="{{ audio.upload.url }}" data-wave="{% static 'assets/media/track2.json' %}">
-                                            <i class="icon-play s-48"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="figure-title">
-                            <h6>{{ audio.title }}</h6>
-                            <small>{{ audio.artist }}</small>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </section>
-        </div>
-    </div>
+    <div class="animated fadeInUpShort p-md-5 p-3">
+        <section class="section">
+            <h1 class="mb-2 text-primary">Videos</h1>
+            <p>Welcome To The Switch Videos. <br>
+            </p>
+        </section>
 
+       <section class="section">
+           <div class="d-flex">
+               <div class="mb-4">
+                   <h4>Videos</h4>
+               </div>
+           </div>
+           <div class="row">
+                {% for video in videos %}
+               <div class="col-lg-3 col-md-6 mb-4">
+                   <div class="card no-b">
+                       <img width="300" height="200" class="rounded mx-auto d-block" src="{{ video.cover.url }}" alt="">
+                       <div class="p-3">
+                           <div class="mb-1">
+                               <a href="{% url 'theswitch:singelevid' video.id %}">
+                                   <h4>{{ video.title }}</h4>
+                               </a>
+                           </div>
+                           <small>{{ video.category }}</small>
+                       </div>
+                   </div>
+               </div>
+               {% endfor %}
+           </div>
+       </section>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item ">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <i aria-hidden="true" class="icon-angle-left"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <i aria-hidden="true" class="icon-angle-right"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
 </main><!--@Page Content-->
 </div><!--@#app-->
 <!--/#app -->

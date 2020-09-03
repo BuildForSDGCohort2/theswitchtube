@@ -70,25 +70,17 @@
 <aside class="main-sidebar fixed offcanvas shadow" data-toggle='offcanvas'>
     <div class="sidebar">
         <ul class="sidebar-menu">
-            <li><a class="ajaxifyPage active" href="{% url 'theswitch:home' %}">
+            <li><a class="ajaxifyPage active " href="{% url 'theswitch:home' %}">
                 <i class="icon icon-home-1 s-24"></i> <span>Home</span>
             </a>
             </li>
-            <li><a class="ajaxifyPage" href="#">
-                <i class="icon icon-layers-1 s-24"></i> <span>Categories</span>
-            </a>
             <li>
             <li><a class="ajaxifyPage" href="{% url 'theswitch:musicpage' %}">
                 <i class="icon icon-music-player-1 s-24"></i> <span>Music</span>
             </a>
             <li>
-            <li><a class="ajaxifyPage" href="#">
+            <li><a class="ajaxifyPage" href="{% url 'theswitch:videos' %}">
                 <i class="icon icon-video-player-2 s-24"></i> <span>Videos</span>
-            </a>
-            </li>
-
-            <li><a class="ajaxifyPage" href="#">
-                <i class="icon icon-photo-camera-1 s-24"></i> <span>Gallery</span>
             </a>
             </li>
 
@@ -98,62 +90,20 @@
             </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="icon icon-menu-4 s-24"></i> <span>Pages</span>
+                    <i class="icon icon-menu-4 s-24"></i> <span>Othres</span>
                     <i class=" icon-angle-left  pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
 
-                    <li><a href="#"><i class="icon icon-document"></i>Register</a>
+                    <li><a href="#"><i class="icon icon-sign-in"></i>Register</a>
                     </li>
                     <li>
-                        <a href="#"><i class="icon icon-document"></i>Login Page</a>
+                        <a href="#"><i class="icon icon-login"></i>Login Page</a>
                     </li>
                     <li>
-                        <a href="#"><i class="icon icon-document"></i>Profile</a>
+                        <a href="#"><i class="icon icon-user-3"></i>Profile</a>
                     </li>
 
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="icon icon-add-3  s-24"></i> <span>Elements</span>
-                    <i class=" icon-angle-left pull-right"></i>
-                </a>
-                <ul class="treeview-menu">
-                    <li>
-                        <a href="#">
-                            <i class="icon icon-app text-primary s-14"></i> <span>Widgets</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon icon-text-width text-primary s-14"></i> <span>Typography</span>
-                        </a>
-                    </li>
-                    <li><a href="#"><i class="icon icon-sliders text-primary s-14"></i>
-                        <span>Slider</span></a></li>
-                    <li><a href="#"><i class="icon icon-folder text-primary s-14"></i>
-                        <span>Tabs</span></a></li>
-                    <li><a href="#"><i class="icon icon-battery-5 text-primary s-14"></i>
-                        <span>Progress Bars</span></a></li>
-
-                    <li><a href="#"><i class="icon icon-attachment text-primary s-14"></i>
-                        <span>Preloaders</span></a></li>
-                    <li>
-                        <a href="#">
-                            <i class="icon icon-user-1 text-primary s-14"></i>
-                            <span>Avatar Placeholders</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon icon-archive-3 text-primary s-14"></i> <span>Icons</span>
-                        </a>
-                    </li>
-                    <li class="mb-5"><a href="#">
-                        <i class="icon icon-view-1 text-primary s-14"></i> <span>Colors</span>
-                    </a>
-                    </li>
                 </ul>
             </li>
 
@@ -175,7 +125,7 @@
             <ul id="playlist" class="playlist list-group">
                 {% for audios in audio %}
                 <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" data-wave="{{ audios.upload.url }}" href="{% static 'assets/media/track1.mp3' %}">
+                    <a class="no-ajaxy media-url" href="{{ audios.upload.url }}" data-wave="{% static 'assets/media/track2.json' %}">
                         <div class="d-flex justify-content-between align-items-center">
                             <i class="icon-play s-28"></i>
                             <figure class="avatar-md float-left mr-3 mt-1">
@@ -363,8 +313,8 @@
                                                 Site. <br>Switch
                                                 Between Audio And Video.</p>
                                             <div class="pt-3">
-                                                <a href="#" class="btn btn-primary btn-lg">Listen Now</a>
-                                                <a href="#" class="btn btn-primary btn-lg">Watch Now</a>
+                                                <a href="{% url 'theswitch:musicpage' %}" class="btn btn-primary btn-lg">Listen Now</a>
+                                                <a href="{% url 'theswitch:videos' %}" class="btn btn-primary btn-lg">Watch Now</a>
                                             </div>
 
                                         </div>
@@ -387,7 +337,7 @@
                         <h4>New Music For You</h4>
                         <p>Enjoy Some New Awesome Music</p>
                     </div>
-                    <a href="albums.html">View More Music<i class="icon-angle-right ml-3"></i></a>
+                    <a href="{% url 'theswitch:musicpage' %}">View More Music<i class="icon-angle-right ml-3"></i></a>
                 </div>
                 <div class="lightSlider has-items-overlay playlist"
                      data-item="6"
@@ -403,7 +353,7 @@
                         <figure>
                             <div class="img-wrapper">
                                 <img src="{{ audios.cover.url }}" alt="/">
-                                <div class="img-overlay text-white">
+                                <div class="img-overlay text-white ">
                                     <div class="figcaption">
                                         <ul class="list-inline d-flex align-items-center justify-content-between">
                                             <li class="list-inline-item">
@@ -465,7 +415,7 @@
                     <div class="card">
                         <figure class="card-img figure">
                             <div class="img-wrapper">
-                                <img src="{{ videos.cover.url }}" alt="Card image">
+                                <img width="400" height="200" src="{{ videos.cover.url }}" alt="Card image">
                             </div>
                             <div class="img-overlay"></div>
                             <div class="has-bottom-gradient">
@@ -592,7 +542,7 @@
                         <h4>Recommended For You</h4>
                         <p>Enjoy some new awesome music</p>
                     </div>
-                    <a href="albums.html">View More Videos<i class="icon-angle-right ml-3"></i></a>
+                    <a href="{% url 'theswitch:videos' %}">View More Videos<i class="icon-angle-right ml-3"></i></a>
                 </div>
                 <div class="lightSlider has-items-overlay playlist"
                      data-item="6"
@@ -659,5 +609,7 @@
 <script src="{% static 'assets/js/app.js' %}"></script>
 
 
+
 </body>
 </html>
+
