@@ -70,7 +70,7 @@
 <aside class="main-sidebar fixed offcanvas shadow" data-toggle='offcanvas'>
     <div class="sidebar">
         <ul class="sidebar-menu">
-            <li><a class="ajaxifyPage active " href="{% url 'theswitch:home' %}">
+            <li><a class="ajaxifyPage" href="{% url 'theswitch:home' %}">
                 <i class="icon icon-home-1 s-24"></i> <span>Home</span>
             </a>
             </li>
@@ -123,22 +123,7 @@
         </div>
         <div class="p-3">
             <ul id="playlist" class="playlist list-group">
-                {% for audios in audio %}
-                <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" href="{{ audios.upload.url }}" data-wave="{% static 'assets/media/track2.json' %}">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <i class="icon-play s-28"></i>
-                            <figure class="avatar-md float-left mr-3 mt-1">
-                                <img class="r-5" alt="" src="{{ audios.cover.url }}">
-                            </figure>
-                            <div>
-                                <h6>{{ audios.title }}</h6>{{ audios.artist }}
-                            </div>
-                            <span class="badge badge-primary badge-pill"></span>
-                        </div>
-                    </a>
-                </li>
-                {% endfor %}
+
 
             </ul>
 
@@ -553,11 +538,11 @@
                      data-pager="false"
                      data-controls="true"
                      data-loop="false">
-                    {% for music in musics %}
+                    {% for music in video %}
                     <div>
                         <figure>
                             <div class="img-wrapper">
-                                <img src="{{ music.cover.url }}" alt="/">
+                                <img height="250" width="500" src="{{ music.cover.url }}" alt="/">
                                 <div class="img-overlay text-white">
                                     <div class="figcaption">
                                         <ul class="list-inline d-flex align-items-center justify-content-between">

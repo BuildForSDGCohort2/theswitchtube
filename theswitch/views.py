@@ -10,7 +10,7 @@ def homepage(request):
 
 
 def home(request):
-    audio = AudioPost.objects.order_by('upload')[:5]
+    audio = AudioPost.objects.order_by('upload')[:7]
     video = VideoPost.objects.order_by('upload')[:5]
     musics = AudioPost.objects.order_by('upload')[:6]
     audio_cat = AudioCategory.objects.order_by('name')[0]
@@ -120,3 +120,82 @@ def audiopost(request):
     context = {'form': form}
     return render(request, 'theswitch/NewAudio.html', context)
 
+
+def audiopost_edith(request, audio_id):
+    """Edit An Existing Post"""
+    audio = AudioPost.objects.get(id=audio_id)
+    post = audio.category
+
+    if request.method != 'POST':
+        # Pre-filled form with Existing content
+        form = AudioForm(instance=audio)
+
+    else:
+        # Post Data Submitted and process
+        form = AudioForm(request.POST, request.FILES, instance=audio)
+        if form.is_valid():
+            form.save()
+
+        return redirect('theswitch:musicpage')
+    context = {'form': form, 'audio': audio, 'post': post}
+    return render(request, 'theswitch/audioedit.html', context)
+
+
+def videopost_edith(request, video_id):
+    """Edit An Existing Post"""
+    video = VideoPost.objects.get(id=video_id)
+    post = video.category
+
+    if request.method != 'POST':
+        # Pre-filled form with Existing content
+        form = VideoForm(instance=video)
+
+    else:
+        # Post Data Submitted and process
+        form = VideoForm(request.POST, request.FILES, instance=video)
+        if form.is_valid():
+            form.save()
+
+        return redirect('theswitch:videos')
+    context = {'form': form, 'video': video, 'post': post}
+    return render(request, 'theswitch/videoedit.html', context)
+
+
+def audiopostcat_edith(request, audiocat_id):
+    """Edit An Existing Post"""
+    audio = AudioCategory.objects.get(id=audiocat_id)
+    post = audio.name
+
+    if request.method != 'POST':
+        # Pre-filled form with Existing content
+        form = AudioCategoryForm(instance=audio)
+
+    else:
+        # Post Data Submitted and process
+        form = AudioCategoryForm(instance=audio, data=request.POST)
+        if form.is_valid():
+            form.save()
+
+        return redirect('theswitch:home')
+    context = {'form': form, 'audio': audio, 'post': post}
+    return render(request, 'theswitch/audiocatedit.html', context)
+
+
+def videopostcat_edith(request, videocat_id):
+    """Edit An Existing Post"""
+    video = VideoCategory.objects.get(id=videocat_id)
+    post = video.name
+
+    if request.method != 'POST':
+        # Pre-filled form with Existing content
+        form = VideoCategoryForm(instance=video)
+
+    else:
+        # Post Data Submitted and process
+        form = VideoCategoryForm(instance=video, data=request.POST)
+        if form.is_valid():
+            form.save()
+
+        return redirect('theswitch:home')
+    context = {'form': form, 'video': video, 'post': post}
+    return render(request, 'theswitch/audiocatedit.html', context)
