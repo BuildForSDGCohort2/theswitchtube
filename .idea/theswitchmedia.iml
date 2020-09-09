@@ -24,6 +24,8 @@
         <option value="$MODULE_DIR$/../theswitchmedia/templates" />
         <option value="$MODULE_DIR$/theswitch/templates" />
         <option value="$MODULE_DIR$/theswitch/templates/theswitch" />
+        <option value="$MODULE_DIR$/users/templates" />
+        <option value="$MODULE_DIR$/users/templates/registration" />
       </list>
     </option>
   </component>

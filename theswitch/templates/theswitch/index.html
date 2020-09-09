@@ -94,12 +94,17 @@
                     <i class=" icon-angle-left  pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
+                    {% if user.is_authenticated %}
 
-                    <li><a href="#"><i class="icon icon-sign-in"></i>Register</a>
-                    </li>
+                        <li><a href="#"><i class="icon icon-user-2"></i>{{ user.username }}</a></li>
+                        <li><a href="{% url 'users:logout' %}"><i class="icon icon-sign-out"></i>LogOut</a></li>
+                    {% else %}
                     <li>
-                        <a href="#"><i class="icon icon-login"></i>Login Page</a>
+                        <a href="{% url 'users:login' %}"><i class="icon icon-login"></i>Login Page</a>
                     </li>
+                        <li><a href="{% url 'users:register' %}"><i class="icon icon-sign-in"></i>Register</a>
+                    </li>
+                    {% endif %}
                     <li>
                         <a href="#"><i class="icon icon-user-3"></i>Profile</a>
                     </li>
