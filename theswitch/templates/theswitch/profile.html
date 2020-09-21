@@ -7,12 +7,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static 'assets/img/basic/favicon.ico' %}" type="image/x-icon">
-    <title>The Switch Videos</title>
+    <title>TheSwitch Profile</title>
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
 </head>
 
-<body class="sidebar-mini sidebar-collapse theme-dark  sidebar-expanded-on-hover" style="display: none;">
+<body class="sidebar-mini sidebar-collapse theme-dark  sidebar-expanded-on-hover has-preloader" style="display: none;">
 <!-- Pre loader
   To disable preloader remove 'has-preloader' from body
  -->
@@ -74,7 +74,7 @@
                 <i class="icon icon-home-1 s-24"></i> <span>Home</span>
             </a>
             </li>
-
+            <li>
             <li><a class="ajaxifyPage" href="{% url 'theswitch:musicpage' %}">
                 <i class="icon icon-music-player-1 s-24"></i> <span>Music</span>
             </a>
@@ -84,15 +84,19 @@
             </a>
             </li>
 
+            <li><a class="ajaxifyPage" href="#">
+                <i class="icon icon-users s-24"></i> <span>Channel</span>
+            </a>
+            </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="icon icon-menu-4 s-24"></i> <span>Others</span>
+                    <i class="icon icon-menu-4 s-24"></i> <span>Othres</span>
                     <i class=" icon-angle-left  pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
                     {% if user.is_authenticated %}
 
-                        <li><a href="{% url 'theswitch:profile' %}"><i class="icon icon-user-2"></i>{{ user.username }}</a></li>
+                        <li><a href="#"><i class="icon icon-user-2"></i>{{ user.username }}</a></li>
                         <li><a href="{% url 'users:logout' %}"><i class="icon icon-sign-out"></i>LogOut</a></li>
                     {% else %}
                     <li>
@@ -101,6 +105,9 @@
                         <li><a href="{% url 'users:register' %}"><i class="icon icon-sign-in"></i>Register</a>
                     </li>
                     {% endif %}
+                    <li>
+                        <a href="#"><i class="icon icon-user-3"></i>Profile</a>
+                    </li>
 
                 </ul>
             </li>
@@ -115,88 +122,6 @@
 <aside class="control-sidebar fixed ">
     <div class="slimScroll">
         <div class="sidebar-header">
-            <h4>PlayList</h4>
-            <p>Awesome Collection for you</p>
-            <a href="#" data-toggle="control-sidebar" class="paper-nav-toggle  active"><i></i></a>
-        </div>
-        <div class="p-3">
-            <ul id="playlist" class="playlist list-group">
-                <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track1.mp3' %}" data-wave="assets/media/track1.json">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <i class="icon-play s-28"></i>
-                            <figure class="avatar-md float-left mr-3 mt-1">
-                                <img class="r-5" src="{% static 'assets/img/demo/a1.jpg' %}" alt="">
-                            </figure>
-                            <div>
-                                <h6>alexander Pierce</h6>Atif Aslam
-                            </div>
-                            <span class="badge badge-primary badge-pill"> 5:03</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track2.mp3' %}" data-wave="assets/media/track2.json">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <i class="icon-play s-28"></i>
-                            <figure class="avatar-md float-left mr-3 mt-1">
-                                <img class="r-5" src="{% static 'assets/img/demo/a2.jpg' %}" alt="">
-                            </figure>
-                            <div>
-                                <h6>alexander Pierce</h6>Atif Aslam
-                            </div>
-                            <span class="badge badge-primary badge-pill"> 5:03</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track3.mp3' %}" data-wave="assets/media/track3.json">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <i class="icon-play s-28"></i>
-                            <figure class="avatar-md float-left mr-3 mt-1">
-                                <img class="r-5" src="{% static 'assets/img/demo/a4.jpg' %}" alt="">
-                            </figure>
-                            <div>
-                                <h6>alexander Pierce</h6>Atif Aslam
-                            </div>
-                            <span class="badge badge-primary badge-pill"> 5:03</span>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track1.mp3' %}"  data-wave="assets/media/track1.json">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <i class="icon-play s-28"></i>
-                            <figure class="avatar-md float-left mr-3 mt-1">
-                                <img class="r-5" src="{% static 'assets/img/demo/a5.jpg' %}" alt="">
-                            </figure>
-                            <div>
-                                <h6>alexander Pierce</h6>Atif Aslam
-                            </div>
-                            <span class="badge badge-primary badge-pill"> 5:03</span>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" href="{% static 'assets/media/track2.mp3' %}" data-wave="assets/media/track2.json">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <i class="icon-play s-28"></i>
-                            <figure class="avatar-md float-left mr-3 mt-1">
-                                <img class="r-5" src="{% static 'assets/img/demo/a6.jpg' %}" alt="">
-                            </figure>
-                            <div>
-                                <h6>alexander Pierce</h6>Atif Aslam
-                            </div>
-                            <span class="badge badge-primary badge-pill"> 5:03</span>
-                        </div>
-                    </a>
-                </li>
-
-
-            </ul>
-
         </div>
     </div>
 </aside>
@@ -242,17 +167,7 @@
         <div class="searchOverlay__related">
             <div class="searchOverlay__suggestion">
                 <div class="card mb-3">
-                    <div class="card-header transparent b-b">
-                        <strong></strong>
-                    </div>
 
-                </div>
-            </div>
-            <div class="searchOverlay__suggestion">
-                <div class="card mb-3">
-                    <div class="card-header transparent b-b">
-                        <strong></strong>
-                    </div>
 
                 </div>
             </div>
@@ -270,7 +185,7 @@
             </a>
             <a class="navbar-brand d-none d-lg-block" href="index.html">
                 <div class="d-flex align-items-center s-14 l-s-2">
-                    <span>THE SWITCH</span>
+                    <span>THESWITCH</span>
                 </div>
             </a>
         </div>
@@ -319,7 +234,7 @@
         <li class="dropup custom-dropdown user user-menu ">
             <a href="#" class="nav-link" data-toggle="dropdown">
                 <figure class="avatar">
-                    <img src="{% static 'assets/img/demo/u7.png' %}" alt="">
+                    <img height="200" width="200" src="{% static 'assets/img/demo/u7.png' %}" alt="">
                 </figure>
                 <i class="icon-more_vert "></i>
             </a>
@@ -351,67 +266,80 @@
 </nav>
 <!--Page Content-->
 <main id="pageContent" class="page has-sidebar">
-<div class="container-fluid relative animatedParent animateOnce">
-    <div class="animated fadeInUpShort p-md-5 p-3">
-        <section class="section">
-            <h1 class="mb-2 text-primary">Videos</h1>
-            <p>Welcome To The Switch Videos. <br>
-            </p>
-        </section>
+<div class="container-fluid relative animatedParent animateOnce p-lg-5">
+    <div class="card no-b shadow no-r">
+        <div class="row no-gutters">
+            <div class="col-md-4 b-r">
+                <div class="text-center p-5 mt-5">
 
-       <section class="section">
-           <div class="d-flex">
-               <div class="mb-4">
-                   <h4>Videos</h4>
-               </div>
-           </div>
-            <div class="card-body has-items-overlay playlist p-5">
-               <div class="row">
-                    {% for video in videos %}
-                   <div class="col-lg-3 col-md-6 mb-4">
-                       <div class="card no-b ">
-                           <div class="img-wrapper r-10">
-                           <a href="{% url 'theswitch:singelevid' video.id %}">
-                           <img width="300" height="200" class="rounded mx-auto d-block" src="{{ video.cover.url }}" alt="">
-                           </a>
-                           </div>
-                           <div class="p-3">
-                               <div class="mb-1">
+                        <img height="300" width="200" src="{{ user.profilepic.profile_image.url }}" alt="//">
+                    <div>
 
-                                       <h4>{{ video.title }}</h4>
-                               </div>
-                               <small>{{ video.category }}</small>
-                           </div>
-                       </div>
-                   </div>
-                   {% endfor %}
-               </div>
-           </div>
-       </section>
+                        <h4 class="p-t-10">{{ user }}</h4>
+                        {{ user.email }}
 
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item ">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <i aria-hidden="true" class="icon-angle-left"></i>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <i aria-hidden="true" class="icon-angle-right"></i>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+                    </div>
+                    <a href="{% url 'theswitch:audiopost' %}" class="btn btn-outline-primary btn-sm  mt-3">Audio</a>
+                    <a href="{% url 'theswitch:videopost' %}" class="btn btn-outline-primary btn-sm  mt-3">Video</a>
+                    <br>
+                    <a href="{% url 'users:editprofile' user.profilepic.id %}" class="btn btn-outline-primary btn-sm  mt-3">Edit Profile</a>
+                    <div class="mt-5">
+                        <ul class="social social list-inline">
+                            <li class="list-inline-item"><a href="#" class="grey-text"><i class="icon-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="#" class="grey-text"><i class="icon-youtube"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="#" class="grey-text"><i class="icon-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- side -->
+            <div class="col-md-8">
+                <div class="p5 b-b">
+                    <div class="pl-4 mt-4">
+                        <h5>Your Videos and Audios</h5>
+                        <H1>Audios</H1>
+                    </div>
+                    <div class="row">
+                        {% for audios in audio %}
+                        <div class="col-md-4">
+                            <div class="p-2">
+                                <h4>{{ audios.header }}</h4>
+                                <img src="{{ audios.cover.url }}">
+                                <a href="{% url 'theswitch:audiopost-edith' audios.id %}">Edith</a>
+                            </div>
+                        </div>
+                        {% endfor %}
 
+                    </div>
+                <!-- end-->
+
+                <div class="pl-4 mt-4">
+                        <H1>Videos</H1>
+                    </div>
+                    <div class="row">
+                        {% for vid in video %}
+                        <div class="col-md-4">
+                            <div class="p-2">
+                                <h4>{{ vid.header }}</h4>
+                                <img height="200" width="200" src="{{ vid.cover.url }}">
+                                <a href="{% url 'theswitch:videopost-edith' vid.id %}">Edith</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
     </div>
+
 </div>
+
 </main><!--@Page Content-->
 </div><!--@#app-->
 <!--/#app -->

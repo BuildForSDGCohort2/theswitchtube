@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+from users.models import ProfilePic
 
 
 # Create your models here.
@@ -30,6 +32,12 @@ class VideoPost(models.Model):
     date = models.DateTimeField(auto_now=True)
     upload = models.FileField(upload_to='media/%Y/%m/%d/')
     cover = models.FileField(upload_to='media', blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    likes = models.ManyToManyField(User, related_name="video_post")
+
+    # Count Likes
+    def total_likes(self):
+        return self.likes.count()
 
     def __str__(self):
         """Return the sting representation of the model"""
@@ -46,8 +54,17 @@ class AudioPost(models.Model):
     date = models.DateTimeField(auto_now=True)
     upload = models.FileField(upload_to='media/%Y/%m/%d/')
     cover = models.FileField(upload_to='media', blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    likes = models.ManyToManyField(User, related_name="audio_post")
+
+    def total_likes(self):
+        return self.likes.count()
 
     def __str__(self):
         """Return the sting representation of the model"""
         return self.header
+
+
+
+
 

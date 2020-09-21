@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
 </head>
 
-<body class="sidebar-mini sidebar-collapse theme-dark  sidebar-expanded-on-hover has-preloader" style="display: none;">
+<body class="sidebar-mini sidebar-collapse theme-dark  sidebar-expanded-on-hover " style="display: none;">
 <!-- Pre loader
   To disable preloader remove 'has-preloader' from body
  -->
@@ -85,14 +85,15 @@
                         {% if form.errors %}
                             <p>Your Username and Password does not match</p>
                         {% endif %}
-                            <form class="form-material" action="{% url 'users:register' %}" method="post">
+                            <form class="form-material" action="{% url 'users:register' %}" method="post" enctype="multipart/form-data">
                                 <!-- Input -->
                                 <div class="body">
                                     <div class="form-group form-float">
                                         <div class="form-line">
                                             {% csrf_token %}
-                                            {% bootstrap_form form2 %}
-
+                                            {% bootstrap_form form_arrange %}
+                                        <br>
+                                            {% bootstrap_form form1_arrange %}
                                             {% buttons %}
                                                 <button name="submit" class="btn btn-primary">Register</button>
                                             {% endbuttons %}

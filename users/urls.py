@@ -8,5 +8,6 @@ app_name = 'users'
 urlpatterns = [
     # add auth urls (default)
     path('', include('django.contrib.auth.urls')),
-    path('register', views.register, name='register')
+    path('register', views.register, name='register'),
+    path('edithprofilepic/<int:profile_id>', views.edith_profile, name='editprofile'),
 ]

@@ -32,16 +32,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_mysql',
     # Third Party App
     'bootstrap4',
     # My Apps
-    'users',
     'theswitch',
 ]
 
@@ -148,3 +149,6 @@ MEDIA_URL = '/media/'
 django_heroku.settings(locals())
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+LOGIN_URL = 'users:;login'
+LOGOUT_URL = 'user:;logout'

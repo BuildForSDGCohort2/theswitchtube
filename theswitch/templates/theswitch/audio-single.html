@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static 'assets/img/basic/favicon.ico' %}" type="image/x-icon">
-    <title>TheSwitch Video</title>
+    <title>TheSwitch Audio</title>
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
 </head>
@@ -263,7 +263,7 @@
                     <div class="card no-b r-0">
                         <div class="card-body p-4">
                             <div class="d-lg-flex align-items-center">
-                                <h1 class="my-3 h4">{{ video.header }}</h1>
+                                <h1 class="my-3 h4">{{ audio.header }}</h1>
                                 <div class="ml-auto">
                                     <a href="#" class="snackbar" data-text="Added to favourites"
                                        data-pos="top-right"
@@ -288,28 +288,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <video controls class="embed-responsive-item"
-                                src="{{ video.upload.url }}"
-                                height="540"
-                                ></video>
+                    <div class="embed-responsive">
+                            <img src="{{ audio.cover.url }}" alt="//" height="600" width="900">
+                        <audio controls class="embed-responsive-item"
+                                src="{{ audio.upload.url }}"
+                                ></audio>
                     </div>
 
                 </div>
                 <br>
-                <form action="{% url 'theswitch:likes' video.id %}" method="post">
+                <form action="{% url 'theswitch:likes2' audio.id %}" method="post">
                     {% csrf_token%}
 
                 {% if user.is_authenticated %}
 
                     {% if liked  %}
-                        <button type="submit" name="video_id" value="{{ video.id }}" class="btn btn-danger">
+                        <button type="submit" name="audio_id" value="{{ audio.id }}" class="btn btn-danger">
                             Unlike
                         </button>
 
                      {% else %}
 
-                        <button type="submit" name="video_id" value="{{ video.id }}" class="btn btn-primary">
+                        <button type="submit" name="audio_id" value="{{ audio.id }}" class="btn btn-primary">
                             Like
                         </button>
                     {% endif %}
@@ -337,17 +337,6 @@
                                     <div> Likes
                                         <span class="text-primary">
                                             <i class="icon icon-arrow_downward"></i> 67%</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="p-5">
-                                    <h5 class="font-weight-normal s-14">Share</h5>
-                                    <span class="s-48 font-weight-lighter amber-text">700</span>
-                                    <div>
-                                            <span class="amber-text">
-                                            <i class="icon icon-arrow_downward"></i> 34</span>
                                     </div>
                                 </div>
                             </div>
@@ -457,13 +446,13 @@
                     <!-- Start -->
 
                    <div class="card-body">
-                       {% for videos in video5 %}
+                       {% for videos in audios %}
                        <div class="d-flex align-items-center mb-4 ">
                            <div class="col-5">
                                <img src="{{ videos.cover.url }}" alt="Card image">
                            </div>
                            <div class="ml-3">
-                               <a href="{% url 'theswitch:singelevid' videos.id %}">
+                               <a href="{% url 'theswitch:singleaudio' videos.id %}">
                                    <h6>{{ videos.title }}</h6>
                                </a>
                                <small class="mt-1">{{ videos.artist }}</small>

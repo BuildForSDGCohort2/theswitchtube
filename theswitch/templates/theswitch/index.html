@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
 </head>
 
-<body class="sidebar-mini sidebar-collapse theme-dark  sidebar-expanded-on-hover has-preloader" style="display: none;">
+<body class="sidebar-mini sidebar-collapse theme-dark  sidebar-expanded-on-hover" style="display: none;">
 <!-- Pre loader
   To disable preloader remove 'has-preloader' from body
  -->
@@ -96,7 +96,7 @@
                 <ul class="treeview-menu">
                     {% if user.is_authenticated %}
 
-                        <li><a href="#"><i class="icon icon-user-2"></i>{{ user.username }}</a></li>
+                        <li><a href="{% url 'theswitch:profile' %}"><i class="icon icon-user-2"></i>{{ user.username }}</a></li>
                         <li><a href="{% url 'users:logout' %}"><i class="icon icon-sign-out"></i>LogOut</a></li>
                     {% else %}
                     <li>
@@ -105,9 +105,6 @@
                         <li><a href="{% url 'users:register' %}"><i class="icon icon-sign-in"></i>Register</a>
                     </li>
                     {% endif %}
-                    <li>
-                        <a href="#"><i class="icon icon-user-3"></i>Profile</a>
-                    </li>
 
                 </ul>
             </li>
@@ -347,7 +344,7 @@
                                     <div class="figcaption">
                                         <ul class="list-inline d-flex align-items-center justify-content-between">
                                             <li class="list-inline-item">
-                                                <a href="#" class="snackbar" data-text="Added to favourites"
+                                                <a href="{% url 'theswitch:singleaudio' audios.id %}" class="snackbar" data-text="Liked"
                                                    data-pos="top-right"
                                                    data-showAction="true"
                                                    data-actionText="ok"
@@ -362,7 +359,7 @@
                                                 </a>
                                             </li>
                                             <li class="list-inline-item">
-                                                <a href="album-single.html"><i
+                                                <a href="{% url 'theswitch:profile' %}"><i
                                                         class="icon-more s-18 pt-3"></i></a></li>
                                         </ul>
                                         <div class="text-center mt-5">
@@ -386,12 +383,14 @@
 
             <!--Latest Posts-->
             <section class="section">
-                <div class="d-flex relative">
+                <div class="d-flex relative align-items-center justify-content-between">
                     <div class="mb-4">
                         <h4>Latest Videos</h4>
                         <p></p>
                     </div>
+                    <a href="{% url 'theswitch:videos' %}">View More Videos<i class="icon-angle-right ml-3"></i></a>
                 </div>
+
                 <div class="lightSlider has-items-overlay"
                      data-item="3"
                      data-item-lg="2"
@@ -401,12 +400,15 @@
                      data-pager="false"
                      data-controls="true"
                      data-loop="false">
+
                     {% for videos in video %}
                     <div class="card">
+
                         <figure class="card-img figure">
                             <div class="img-wrapper">
                                 <img width="400" height="200" src="{{ videos.cover.url }}" alt="Card image">
                             </div>
+
                             <div class="img-overlay"></div>
                             <div class="has-bottom-gradient">
                                 <div class="d-flex">
@@ -434,7 +436,7 @@
             </section>
             <!--@New Releases-->
 
-            <!--PlayList & Events-->
+            <!--Audio  and Video Switch-->
             <section class="section mt-4">
                 <div class="row row-eq-height">
                     <div class="col-lg-12">
@@ -445,28 +447,27 @@
                                         <div class="d-flex">
                                             <!--<i class="icon-music s-36 mr-3  mt-2"></i>-->
                                             <div>
-                                                <h4>Music Categories</h4>
-                                                <p>View Our List Of Music With Categories</p>
+                                                <h4>Musics</h4>
+                                                <p>View Our List Of Musics and Videos</p>
                                                 <div class="mt-3">
                                                     <ul class="nav nav-tabs card-header-tabs nav-material responsive-tab mb-1"
                                                         role="tablist">
 
                                                         <li class="nav-item">
-                                                            <a class="nav-link active show" id="w4--tab3" data-toggle="tab"
+                                                            <a class="nav-link active show " id="w4--tab3"
+                                                               data-toggle="tab"
                                                                href="#w2-tab3" role="tab"
 
-                                                               aria-selected="true">{{ audio_cat.name }}</a>
+                                                               aria-selected="true">Music</a>
                                                         </li>
 
-
-                                                        {% for  music in audios %}
                                                         <li class="nav-item">
-                                                            <a class="nav-link" id="w4--tab3" data-toggle="tab"
-                                                               href="#w2-tab3" role="tab"
+                                                            <a class="nav-link" id="w3--tab1" data-toggle="tab"
+                                                               href="#w2-tab1" role="tab"
 
-                                                               aria-selected="false">{{ music.name }}</a>
+                                                               aria-selected="false">Videos</a>
                                                         </li>
-                                                        {% endfor %}
+
                                                     </ul>
                                                 </div>
                                             </div>
@@ -478,115 +479,80 @@
                             </div>
                             <div class="card-body no-p">
                                 <div class="tab-content" id="v-pills-tabContent1">
-                                    <div class="tab-pane fade " id="w2-tab1" role="tabpanel"
-                                         aria-labelledby="w2-tab1">
-                                       <div class="playlist pl-lg-3 pr-lg-3">
-
-                                       </div>
-                                    </div>
+                                    <!-- Start-->
                                     <div class="tab-pane fade show active" id="w2-tab3" role="tabpanel"
                                          aria-labelledby="w2-tab3">
                                         <div class="card-body has-items-overlay playlist p-5">
                                             <div class="row">
-                                                <!-- Start -->
+                                                <!-- Start 1 -->
                                                 {% for audio in musics %}
-                                                <div class="col-md-3 mb-3">
-                                                    <figure class="mb-2">
-                                                        <div class="img-wrapper r-10">
-                                                            <img class=" r-10" src="{{ audio.cover.url }}"
-                                                                 alt="/">
-                                                            <div class="img-overlay text-white p-5">
-                                                                <div class="center-center">
-                                                                    <a class="no-ajaxy media-url"
-                                                                       href="{{ audio.upload.url }}" data-wave="{% static 'assets/media/track2.json' %}">
-                                                                        <i class="icon-play s-48"></i>
-                                                                    </a>
+                                                    <div class="col-md-3 mb-3">
+                                                        <figure class="mb-2">
+                                                            <div class="img-wrapper r-10">
+                                                                <img class=" r-10" src="{{ audio.cover.url }}"
+                                                                     alt="/">
+                                                                <div class="img-overlay text-white p-5">
+                                                                    <div class="center-center">
+                                                                        <a class="no-ajaxy media-url"
+                                                                           href="{{ audio.upload.url }}"
+                                                                           data-wave="{% static 'assets/media/track2.json' %}">
+                                                                            <i class="icon-play s-48"></i>
+                                                                        </a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                        </figure>
+                                                        <div class="figure-title">
+                                                            <h6>{{ audio.title }}</h6>
+                                                            <small>{{ audio.artist }}</small>
                                                         </div>
-                                                    </figure>
-                                                    <div class="figure-title">
-                                                        <h6>{{ audio.title }}</h6>
-                                                        <small>{{ audio.artist }}</small>
                                                     </div>
-                                                </div>
+                                                {% endfor %}
+
+                                                <!-- END 1 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- endd --->
+                                    <div class="tab-pane fade" id="w2-tab1" role="tabpanel"
+                                         aria-labelledby="w2-tab1">
+                                        <div class="card-body has-items-overlay  p-5">
+                                            <div class="row">
+                                                <!-- Start -->
+                                                {% for vid in video %}
+                                                    <div class="col-md-3 mb-3">
+                                                        <figure class="mb-2">
+                                                            <div class="img-wrapper r-10">
+                                                                <a href="{% url 'theswitch:singelevid' vid.id %}">
+                                                                    <img class=" r-10" width="300" height="200"
+                                                                         src="{{ vid.cover.url }}"
+                                                                         alt="/">
+                                                                </a>
+                                                            </div>
+                                                        </figure>
+                                                        <div class="figure-title">
+                                                            <h6>{{ vid.title }}</h6>
+                                                            <small>{{ vid.artist }}</small>
+                                                        </div>
+                                                    </div>
+
                                                 {% endfor %}
 
                                                 <!-- END -->
+                                            </div>
                                         </div>
+                                        <!-- jsvcsdvc -->
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                </div>
             </section>
             <!--@PlayLIst & Events-->
 
-            <!--Recommend-->
-            <section class="section">
-                <div class="d-flex relative align-items-center justify-content-between">
-                    <div class="mb-4">
-                        <h4>Recommended For You</h4>
-                        <p>Enjoy some new awesome music</p>
-                    </div>
-                    <a href="{% url 'theswitch:videos' %}">View More Videos<i class="icon-angle-right ml-3"></i></a>
-                </div>
-                <div class="lightSlider has-items-overlay playlist"
-                     data-item="6"
-                     data-item-lg="3"
-                     data-item-md="3"
-                     data-item-sm="2"
-                     data-auto="false"
-                     data-pager="false"
-                     data-controls="true"
-                     data-loop="false">
-                    {% for music in video %}
-                    <div>
-                        <figure>
-                            <div class="img-wrapper">
-                                <img height="250" width="500" src="{{ music.cover.url }}" alt="/">
-                                <div class="img-overlay text-white">
-                                    <div class="figcaption">
-                                        <ul class="list-inline d-flex align-items-center justify-content-between">
-                                            <li class="list-inline-item">
-                                                <a href="#" class="snackbar" data-text="Added to favourites"
-                                                   data-pos="top-right"
-                                                   data-showAction="true"
-                                                   data-actionText="ok"
-                                                   data-actionTextColor="#fff"
-                                                   data-backgroundColor="#0c101b">
-                                                    <i class="icon-heart-o s-18"></i>
-                                                </a></li>
-                                            <li class="list-inline-item ">
-                                                <a class="no-ajaxy media-url" href="{{ music.upload.url }}" data-wave="{% static 'assets/media/track2.json' %}">
-                                                    <i class="icon-play s-48"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="album-single.html"><i
-                                                        class="icon-more s-18 pt-3"></i></a></li>
-                                        </ul>
-                                        <div class="text-center mt-5">
-                                            <h5>{{ music.title }}</h5>
-                                            <span>{{ music.artist }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="figure-title text-center p-2">
-                                    <h5>{{ music.title }}</h5>
-                                    <span>{{ music.artist }}</span>
-                                </div>
-                            </div>
-                        </figure>
-                    </div>
-                    {% endfor %}
 
-                </div>
-            </section>
-            <!--@Recommend-->
 
         </div>
     </div>
