@@ -1,4 +1,5 @@
 {% load static %}
+{% load bootstrap4 %}
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -288,8 +289,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="embed-responsive">
-                            <img src="{{ audio.cover.url }}" alt="//" height="600" width="900">
+                    <div class="embed-responsive" size="500">
+                            <img src="{{ audio.cover.url }}" alt="//" height="800" width="800" class="center">
                         <audio controls class="embed-responsive-item"
                                 src="{{ audio.upload.url }}"
                                 ></audio>
@@ -367,73 +368,54 @@
 
                 <div class="card mt-1 mb-5">
                     <div class="card-body">
+                        <h2>Comments</h2>
+
+                        {% if user.is_authenticated %}
+
+                        <div class="form-group r-30">
+                            {% if comment %}
+
+                                <form action="{% url 'theswitch:singleaudio' audio.id %}" method="post" >
+                                    {% csrf_token %}
+                                    {% bootstrap_form form %}
+
+                                    {% buttons %}
+                                        <button name="submit" class="btn btn-primary small">comment</button>
+                                    {% endbuttons %}
+                                </form>
+                            {% endif %}
+                        </div>
+                            {% else %}
+                            <small>login or register to add comment</small>
+
+                    {% endif %}
+
+                        {% if not audio.comments.all %}
                         <div class="media my-5 ">
                             <div class="avatar avatar-md mr-3 mt-1">
                                 <img src="{% static 'assets/img/demo/u7.png' %}" alt="user">
                             </div>
                             <div class="media-body">
-                                <h6 class="mt-0">Ami Fro</h6>
-                                Cras sit amet nibh libero, in gravida nulla.
+                                No Comment Yet
                             </div>
                         </div>
-                        <div class="media my-5 ">
-                            <div class="avatar avatar-md mr-3 mt-1">
-                                <img src="{% static 'assets/img/demo/u6.png' %}" alt="user">
-                            </div>
-                            <div class="media-body">
-                                <h6 class="mt-0">Sara Kamzoon</h6>
-                                vestibulum in vulputate at, tempus viverra turpis.
-                                <div class="media p-2 my-4">
-                                    <a href="#">
-                                        <div class="avatar avatar-md mr-3 mt-1">
-                                            <img src="{% static 'assets/img/demo/u8.png' %}" alt="user">
-                                        </div>
-                                    </a>
-                                    <div class="media-body">
-                                        <h6 class="mt-0">Joe Doe</h6>
-                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                        sollicitudin.
-                                    </div>
-                                </div>
-                                <div class="media p-2 my-4">
-                                    <a href="#">
-                                        <div class="avatar avatar-md mr-3 mt-1">
-                                            <img src="{% static 'assets/img/demo/u7.png' %}" alt="user">
-                                        </div>
-                                    </a>
-                                    <div class="media-body">
-                                        <h6 class="mt-0">Find Doe
+                        {% else %}
 
-                                        </h6>
-                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                        sollicitudin.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="media my-5 ">
-                            <div class="avatar avatar-md mr-3 mt-1">
-                                <img src="{% static 'assets/img/demo/u9.png' %}" alt="user">
-                            </div>
+                            {% for comment in audio.comments.all %}
 
-                            <div class="media-body">
-                                <h6 class="mt-0">Ami Fro</h6>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                sollicitudin. Cras purus odio, vestibulum in
-                                vulputate at, tempus viverra turpis.
-                            </div>
-                        </div>
                         <div class="media my-5 ">
                             <div class="avatar avatar-md mr-3 mt-1">
                                 <img src="{% static 'assets/img/demo/u10.png' %}" alt="user">
                             </div>
                             <div class="media-body">
-                                <h6 class="mt-0">Ami Fro </h6>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                sollicitudin. Cras purus odio, vestibulum in
-                                vulputate at, tempus viverra turpis.
+                                <h4 class="mt-0">{{ comment.name }}</h4>
+                                {{ comment.body }}
                             </div>
                         </div>
+                                <hr class="white">
+                            {% endfor %}
+                        {% endif %}
+
                     </div>
                 </div>
 

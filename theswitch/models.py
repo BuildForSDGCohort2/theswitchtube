@@ -65,6 +65,24 @@ class AudioPost(models.Model):
         return self.header
 
 
+class VideoComment(models.Model):
+    """Comment"""
+    comment = models.ForeignKey(VideoPost, related_name='comments', on_delete=models.CASCADE)
+    name = models.ForeignKey(User, on_delete=models.CASCADE)
+    body = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '%s - %s' % (self.comment.title, self.name)
 
 
+class AudioComment(models.Model):
+    """Comment"""
+    comment = models.ForeignKey(AudioPost, related_name='comments', on_delete=models.CASCADE)
+    name = models.ForeignKey(User, on_delete=models.CASCADE)
+    body = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '%s - %s' % (self.comment.title, self.name)
 

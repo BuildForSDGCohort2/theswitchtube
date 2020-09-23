@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import VideoPost, VideoCategory, AudioPost, AudioCategory
+from .models import VideoPost, VideoCategory, AudioPost, AudioCategory, VideoComment, AudioComment
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from django.http import Http404
-from .forms import VideoCategoryForm, AudioCategoryForm, VideoForm, AudioForm
+from .forms import VideoCategoryForm, AudioCategoryForm, VideoForm, AudioForm, VideoCommentForm, AudioCommentForm
 from django.contrib.auth.decorators import login_required
 from users.models import ProfilePic
 from django.http import HttpResponseRedirect
@@ -32,14 +32,36 @@ def singlevideo(request, video_id):
     # Getting The first five post from site
     video_5 = VideoPost.objects.order_by('?')[:4]
 
+    if request.method != 'POST':
+        # No data Submitted, Return blank form
+        form = VideoCommentForm()
+
+    else:
+        # Post Data Submitted, process Data
+        # setting default values for the form
+        form = VideoCommentForm(request.POST)
+        if form.is_valid():
+            new_data = form.save(commit=False)
+            new_data.name = request.user
+            new_data.comment = video
+            form.save()
+            return HttpResponseRedirect(reverse('theswitch:singelevid', args=[int(video_id)]))
+
+    # Disable and enable Comment of users that has comment
+    comment_stuff = get_object_or_404(VideoPost, id=video_id)
+    comment = True
+    if comment_stuff.comments.filter(name=request.user).exists():
+        comment = False
+
     # Get Likes and Count
     stuff = get_object_or_404(VideoPost, id=video_id)
     total_likes = stuff.total_likes()
-    liked = False
+    liked = True
     if stuff.likes.filter(id=request.user.id).exists():
-        liked = True
+        liked = False
 
-    context = {'video': video, 'video5': video_5, 'videos': videos, 'total_likes': total_likes, 'liked': liked}
+    context = {'video': video, 'video5': video_5, 'videos': videos, 'total_likes': total_likes,
+               'liked': liked, 'form': form, 'comment': comment}
     return render(request, 'theswitch/video-single.html', context)
 
 
@@ -49,6 +71,27 @@ def singleaudio(request, audio_id):
     # Getting The first five post from site
     audios = AudioPost.objects.order_by('?')[:4]
 
+    if request.method != 'POST':
+        # No data Submitted, Return blank form
+        form = AudioCommentForm()
+
+    else:
+        # Post Data Submitted, process Data
+        # setting default values for the form
+        form = AudioCommentForm(request.POST)
+        if form.is_valid():
+            new_data = form.save(commit=False)
+            new_data.name = request.user
+            new_data.comment = audio
+            form.save()
+            return HttpResponseRedirect(reverse('theswitch:singleaudio', args=[int(audio_id)]))
+
+    # Disable and enable Comment of users that has comment
+    comment_stuff = get_object_or_404(AudioPost, id=audio_id)
+    comment = True
+    if comment_stuff.comments.filter(name=request.user).exists():
+        comment = False
+
     # Get Likes and Count
     stuff = get_object_or_404(AudioPost, id=audio_id)
     total_likes = stuff.total_likes()
@@ -56,7 +99,8 @@ def singleaudio(request, audio_id):
     if stuff.likes.filter(id=request.user.id).exists():
         liked = True
 
-    context = {'total_likes': total_likes, 'liked': liked, 'audio': audio, 'audios': audios}
+    context = {'total_likes': total_likes, 'liked': liked, 'audio': audio, 'audios': audios, 'form': form,
+               'comment': comment}
     return render(request, 'theswitch/audio-single.html', context)
 
 
@@ -313,5 +357,7 @@ def likes2(request, pk):
         post.likes.add(request.user)
         liked = True
     return HttpResponseRedirect(reverse('theswitch:singleaudio', args=[str(pk)]))
+
+
 
 

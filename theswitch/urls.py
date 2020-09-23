@@ -23,5 +23,5 @@ urlpatterns = [
     path('videopostcat-edith<int:videocat_id>', views.videopostcat_edith, name='videopostcat-edith'),
     path('user', views.profile_page, name='profile'),
     path('likes/<int:pk>', views.likes, name='likes'),
-    path('likes2/<int:pk>', views.likes2, name='likes2')
+    path('likes2/<int:pk>', views.likes2, name='likes2'),
 ]
