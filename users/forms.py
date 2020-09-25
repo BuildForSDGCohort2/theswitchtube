@@ -31,3 +31,4 @@ class ProfilePicForm(ModelForm):
         model = ProfilePic
         fields = ['bio', 'profile_image']
 
+
