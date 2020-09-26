@@ -107,7 +107,7 @@ def singleaudio(request, audio_id):
 def music(request):
     """Getting all Audios and Displaying Their Content"""
 
-    musics = AudioPost.objects.all()
+    musics = AudioPost.objects.all().order_by('-date')
 
     # numbers of post by page
     pages = Paginator(musics, 4)
@@ -122,7 +122,7 @@ def music(request):
 
 def videos(request):
     """Getting all video post"""
-    videos = VideoPost.objects.order_by('date')
+    videos = VideoPost.objects.order_by('-date')
     # numbers of post by page
     pages = Paginator(videos, 4)
 
