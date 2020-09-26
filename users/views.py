@@ -4,7 +4,7 @@ from django.db import transaction
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
-from .forms import RegistrationForm, ProfilePicForm
+from .forms import RegistrationForm, ProfilePicForm, EdithProfileForm
 from .models import ProfilePic, User
 
 
@@ -80,6 +80,26 @@ def profilepic(request):
     #  Display a blank or completed form
     content = {'form': form, 'form_set': form1_arrange}
     return render(request, 'registration/register_extend.html', content)
+
+
+def edith_profile_page(request, user_id):
+    userprofile = User.objects.get(id=user_id)
+    if request.method != 'POST':
+
+        profile_form = EdithProfileForm(instance=userprofile)
+
+    else:
+
+        profile_form = EdithProfileForm(request.POST, request.FILES, instance=userprofile)
+        if profile_form.is_valid():
+            edith = profile_form.save(commit=False)
+            edith.user = request.user
+            profile_form.save()
+
+            return redirect('theswitch:profile')
+
+    content = {'form': profile_form}
+    return render(request, 'registration/edith_main_profile.html', content)
 
 
 

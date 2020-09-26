@@ -32,3 +32,23 @@ class ProfilePicForm(ModelForm):
         fields = ['bio', 'profile_image']
 
 
+class EdithProfileForm(ModelForm):
+    email = forms.EmailField(required=True)
+
+    class Meta:
+        model = User
+        fields = {'username', 'email', 'first_name', 'last_name'}
+
+    def save(self, commit=True):
+        user = super(EdithProfileForm, self).save(commit=False)
+        user.first_name = self.cleaned_data["first_name"]
+        user.last_name = self.cleaned_data["last_name"]
+        user.email = self.cleaned_data["email"]
+        user.save()
+
+        if commit:
+            user.save()
+
+        return user
+
+
