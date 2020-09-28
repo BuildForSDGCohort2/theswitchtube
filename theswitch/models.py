@@ -34,7 +34,7 @@ class VideoPost(models.Model):
     upload = models.FileField(upload_to='media/%Y/%m/%d/', validators=[FileExtensionValidator(['mp4'])])
     cover = models.FileField(upload_to='media', blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    likes = models.ManyToManyField(User, related_name="video_post")
+    likes = models.ManyToManyField(User, related_name="video_post", blank=True, null=True)
 
     # Count Likes
     def total_likes(self):
@@ -56,7 +56,7 @@ class AudioPost(models.Model):
     upload = models.FileField(upload_to='media/%Y/%m/%d/', validators=[FileExtensionValidator(['mp3'])])
     cover = models.FileField(upload_to='media', blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    likes = models.ManyToManyField(User, related_name="audio_post")
+    likes = models.ManyToManyField(User, related_name="audio_post", blank=True, null=True)
 
     def total_likes(self):
         return self.likes.count()
