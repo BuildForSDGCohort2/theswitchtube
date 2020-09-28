@@ -3,7 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.db import transaction
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
+from django.contrib.auth.views import PasswordChangeView
 from .forms import RegistrationForm, ProfilePicForm, EdithProfileForm
 from .models import ProfilePic, User
 
@@ -82,6 +83,7 @@ def profilepic(request):
     return render(request, 'registration/register_extend.html', content)
 
 
+@login_required
 def edith_profile_page(request, user_id):
     userprofile = User.objects.get(id=user_id)
     if request.method != 'POST':
@@ -100,6 +102,7 @@ def edith_profile_page(request, user_id):
 
     content = {'form': profile_form}
     return render(request, 'registration/edith_main_profile.html', content)
+
 
 
 
