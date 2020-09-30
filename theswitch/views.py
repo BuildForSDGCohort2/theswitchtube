@@ -194,7 +194,7 @@ def videopost(request):
             new_data = form.save(commit=False)
             new_data.user = request.user
             form.save()
-            return redirect('theswitch:home')
+            return redirect('theswitch:profile')
     context = {'form': form}
     return render(request, 'theswitch/NewVideo.html', context)
 
@@ -215,7 +215,7 @@ def audiopost(request):
             new_data = form.save(commit=False)
             new_data.user = request.user
             form.save()
-            return redirect('theswitch:home')
+            return redirect('theswitch:profile')
     context = {'form': form}
     return render(request, 'theswitch/NewAudio.html', context)
 
@@ -267,7 +267,7 @@ def videopost_edith(request, video_id):
             new_data.user = request.user
             form.save()
 
-        return redirect('theswitch:videos')
+        return redirect('theswitch:profile')
     context = {'form': form, 'video': video, 'post': post}
     return render(request, 'theswitch/videoedit.html', context)
 
@@ -293,7 +293,7 @@ def audiopostcat_edith(request, audiocat_id):
             new_data.user = request.user
             form.save()
 
-        return redirect('theswitch:home')
+        return redirect('theswitch:profile')
     context = {'form': form, 'audio': audio, 'post': post}
     return render(request, 'theswitch/audiocatedit.html', context)
 
