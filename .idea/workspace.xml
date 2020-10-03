@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7f084fe3-43b9-4f27-b82b-a54b7d4c20a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theswitchmedia/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/theswitchmedia/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,11 +37,44 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theswitchmedia/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+            <state relative-caret-position="102">
+              <caret line="84" selection-start-line="84" selection-end-line="98" selection-end-column="1" />
               <folding>
                 <element signature="e#312#321#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/theswitch/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="e#37#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/theswitchmedia/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="6" column="30" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="30" />
+              <folding>
+                <element signature="e#638#670#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1445">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
             </state>
           </provider>
         </entry>
@@ -174,12 +206,25 @@
             <path>
               <item name="theswitchtube" type="b2602c69:ProjectViewProjectNode" />
               <item name="theswitchtube" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="theswitchtube" type="b2602c69:ProjectViewProjectNode" />
               <item name="theswitchtube" type="462c0819:PsiDirectoryNode" />
-              <item name="theswitchmedia" type="462c0819:PsiDirectoryNode" />
+              <item name="theswitch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="theswitchtube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theswitchtube" type="462c0819:PsiDirectoryNode" />
+              <item name="theswitch" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="theswitchtube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theswitchtube" type="462c0819:PsiDirectoryNode" />
+              <item name="theswitch" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="theswitch" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -491,11 +536,18 @@
       <option name="project" value="LOCAL" />
       <updated>1601490415816</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="database">
+      <created>1601495856305</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1601495856306</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427440000" />
+    <option name="totallyTimeSpent" value="434237000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -532,6 +584,29 @@
       <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
       <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21104388" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.32872504" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32872504" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32872504" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32872504" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5015129" side_tool="true" weight="0.2857143" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" visible="true" weight="0.2857143" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32872504" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -669,16 +744,6 @@
     <entry file="file://$PROJECT_DIR$/theswitchmedia/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/theswitch/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="e#37#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/theswitch/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
@@ -778,16 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theswitchmedia/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#638#670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -804,22 +859,6 @@
           <caret line="57" column="60" lean-forward="true" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/theswitch/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="294" lean-forward="true" selection-start-line="294" selection-end-line="294" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-            <element signature="e#1053#2458#0" />
-            <element signature="e#2501#3887#0" />
-            <element signature="e#3914#4303#0" />
-            <element signature="e#4331#4688#0" />
-            <element signature="e#4739#5315#0" />
-            <element signature="e#5366#5943#0" />
           </folding>
         </state>
       </provider>
@@ -856,13 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -943,10 +975,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/theswitchmedia/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <element signature="e#638#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theswitch/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#37#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theswitch/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="294" lean-forward="true" selection-start-line="294" selection-end-line="294" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+            <element signature="e#1053#2458#0" />
+            <element signature="e#2501#3887#0" />
+            <element signature="e#3914#4303#0" />
+            <element signature="e#4331#4688#0" />
+            <element signature="e#4739#5315#0" />
+            <element signature="e#5366#5943#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/theswitchmedia/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+        <state relative-caret-position="102">
+          <caret line="84" selection-start-line="84" selection-end-line="98" selection-end-column="1" />
           <folding>
             <element signature="e#312#321#0" expanded="true" />
           </folding>
