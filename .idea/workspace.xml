@@ -167,7 +167,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="ChangesTree.GroupingKeys" value="directory&#10;repository" />
+    <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
