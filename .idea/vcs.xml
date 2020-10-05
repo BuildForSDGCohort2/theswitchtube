@@ -3,7 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/theswitchmedia" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/theswitchmedia/theswitchtube" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/theswitchtube" vcs="Git" />
   </component>
 </project>
