@@ -83,11 +83,12 @@ DATABASES = {
     'default': {
         # mysql database
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': ' ec2-52-73-199-211.compute-1.amazonaws.com',
+        'DATABASE': 'dhc29k3vikkdl',
         'NAME': 'postgresql-slippery-70115',
         'USER': 'gepsztgrzifkew',
         'PORT': '5432',
         'PASSWORD': 'b9f1b009f490249478a369719263e0f885d8d8670aab0bd84d3a6259bb4631cf',
-        'URI': '    postgres://gepsztgrzifkew:b9f1b009f490249478a369719263e0f885d8d8670aab0bd84d3a6259bb4631cf@ec2-52-73-199-211.compute-1.amazonaws.com:5432/dhc29k3vikkdl'
     }
 
 }
