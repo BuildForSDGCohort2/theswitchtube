@@ -31,7 +31,7 @@ class VideoPost(models.Model):
     title = models.CharField(max_length=100, blank=True)
     # file will be saved to MEDIA_ROOT/uploads/2015/01/30
     date = models.DateTimeField(auto_now=True)
-    upload = models.FileField(upload_to='media/%Y/%m/%d/', validators=[FileExtensionValidator(['mp4'])])
+    upload = models.FileField(upload_to='media/%Y/%m/%d/', validators=[FileExtensionValidator(['.mp4'])])
     cover = models.FileField(upload_to='media', blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     likes = models.ManyToManyField(User, related_name="video_post", blank=True)
@@ -53,7 +53,7 @@ class AudioPost(models.Model):
     title = models.CharField(max_length=100, blank=True)
     # file will be saved to MEDIA_ROOT/uploads/2015/01/30
     date = models.DateTimeField(auto_now=True)
-    upload = models.FileField(upload_to='media/%Y/%m/%d/', validators=[FileExtensionValidator(['mp3'])])
+    upload = models.FileField(upload_to='media/%Y/%m/%d/', validators=[FileExtensionValidator(['.mp3'])])
     cover = models.FileField(upload_to='media', blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     likes = models.ManyToManyField(User, related_name="audio_post", blank=True)
