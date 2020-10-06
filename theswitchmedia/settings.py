@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'theswitchmedia.wsgi.application'
 DATABASES = {
     'default': {
         # mysql database
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'HOST': ' ec2-52-73-199-211.compute-1.amazonaws.com',
         'DATABASE': 'dhc29k3vikkdl',
         'NAME': 'postgresql-slippery-70115',
