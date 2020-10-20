@@ -82,22 +82,14 @@ WSGI_APPLICATION = 'theswitchmedia.wsgi.application'
 DATABASES = {
     'default': {
         # mysql database
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST': ' ec2-52-73-199-211.compute-1.amazonaws.com',
-        'DATABASE': 'dhc29k3vikkdl',
-        'NAME': 'postgresql-slippery-70115',
-        'USER': 'gepsztgrzifkew',
-        'PORT': '5432',
-        'PASSWORD': 'b9f1b009f490249478a369719263e0f885d8d8670aab0bd84d3a6259bb4631cf',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 
 }
 
-DATABASE_URL = os.environ['DATABASE_URL']
-
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
