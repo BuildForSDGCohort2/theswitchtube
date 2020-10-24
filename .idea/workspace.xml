@@ -35,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theswitchmedia/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2091">
-              <caret line="123" selection-start-line="123" selection-end-line="123" />
+            <state relative-caret-position="-2168">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#312#321#0" expanded="true" />
               </folding>
@@ -48,12 +48,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/theswitch/models.py">
+        <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+            <state relative-caret-position="323">
+              <caret line="271" column="40" lean-forward="true" selection-start-line="271" selection-start-column="40" selection-end-line="271" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/theswitch/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="295" column="40" selection-start-line="295" selection-start-column="35" selection-end-line="295" selection-end-column="40" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#64#0" expanded="true" />
+                <element signature="e#1053#2458#0" />
+                <element signature="e#2501#3887#0" />
+                <element signature="e#3914#4303#0" />
+                <element signature="e#4331#4688#0" />
+                <element signature="e#4739#5315#0" />
+                <element signature="e#5366#5943#0" />
               </folding>
             </state>
           </provider>
@@ -106,7 +121,7 @@
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/theswitchmedia" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -157,11 +172,11 @@
         <option value="$PROJECT_DIR$/theswitch/templates/theswitch/audiocatedit.html" />
         <option value="$PROJECT_DIR$/theswitch/templates/theswitch/audioedit.html" />
         <option value="$PROJECT_DIR$/theswitch/templates/theswitch/index.html" />
-        <option value="$PROJECT_DIR$/theswitch/templates/theswitch/profile.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/theswitch/models.py" />
         <option value="$PROJECT_DIR$/theswitchmedia/settings.py" />
+        <option value="$PROJECT_DIR$/theswitch/templates/theswitch/profile.html" />
       </list>
     </option>
   </component>
@@ -189,6 +204,24 @@
               <item name="theswitchtube" type="b2602c69:ProjectViewProjectNode" />
               <item name="theswitchtube" type="462c0819:PsiDirectoryNode" />
               <item name="theswitch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="theswitchtube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theswitchtube" type="462c0819:PsiDirectoryNode" />
+              <item name="theswitch" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="theswitchtube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theswitchtube" type="462c0819:PsiDirectoryNode" />
+              <item name="theswitch" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="theswitch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="theswitchtube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theswitchtube" type="462c0819:PsiDirectoryNode" />
+              <item name="theswitchmedia" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -312,7 +345,7 @@
       <workItem from="1600705202374" duration="58477000" />
       <workItem from="1601923591982" duration="3589000" />
       <workItem from="1601935128712" duration="13045000" />
-      <workItem from="1603546522876" duration="348000" />
+      <workItem from="1603546522876" duration="588000" />
     </task>
     <task id="LOCAL-00001" summary="new database">
       <created>1597509399003</created>
@@ -607,7 +640,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="456949000" />
+    <option name="totallyTimeSpent" value="457189000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -620,6 +653,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22012103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -738,11 +772,11 @@
     <MESSAGE value="Commets section" />
     <MESSAGE value="Full Registration" />
     <MESSAGE value="pagination" />
-    <MESSAGE value="corrections" />
     <MESSAGE value="database correction" />
     <MESSAGE value="model" />
     <MESSAGE value="database" />
-    <option name="LAST_COMMIT_MESSAGE" value="database" />
+    <MESSAGE value="corrections" />
+    <option name="LAST_COMMIT_MESSAGE" value="corrections" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/users/admin.py">
@@ -1017,29 +1051,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/theswitch/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="294" lean-forward="true" selection-start-line="294" selection-end-line="294" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-            <element signature="e#1053#2458#0" />
-            <element signature="e#2501#3887#0" />
-            <element signature="e#3914#4303#0" />
-            <element signature="e#4331#4688#0" />
-            <element signature="e#4739#5315#0" />
-            <element signature="e#5366#5943#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1084,22 +1095,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/theswitch/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/theswitchmedia/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2091">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        <state relative-caret-position="-2168">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#312#321#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theswitch/models.py">
+    <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+        <state relative-caret-position="323">
+          <caret line="271" column="40" lean-forward="true" selection-start-line="271" selection-start-column="40" selection-end-line="271" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theswitch/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="295" column="40" selection-start-line="295" selection-start-column="35" selection-end-line="295" selection-end-column="40" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#64#0" expanded="true" />
+            <element signature="e#1053#2458#0" />
+            <element signature="e#2501#3887#0" />
+            <element signature="e#3914#4303#0" />
+            <element signature="e#4331#4688#0" />
+            <element signature="e#4739#5315#0" />
+            <element signature="e#5366#5943#0" />
           </folding>
         </state>
       </provider>
