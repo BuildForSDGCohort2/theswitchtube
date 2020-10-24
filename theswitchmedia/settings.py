@@ -128,18 +128,18 @@ USE_TZ = True
 
 # Static root file
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'static')
+#]
+#STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 # Media root file
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 # Heroku settings
 django_heroku.settings(locals())
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_URL = 'users:;login'
 LOGOUT_URL = 'user:;logout'
@@ -161,4 +161,5 @@ AWS_STORAGE_BUCKET_NAME = 'theswitch'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
