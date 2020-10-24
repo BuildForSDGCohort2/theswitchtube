@@ -128,10 +128,10 @@ USE_TZ = True
 
 # Static root file
 STATIC_URL = '/static/'
-#STATICFILES_DIRS = [
-#    os.path.join(BASE_DIR, 'static')
-#]
-#STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 # Media root file
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -139,7 +139,7 @@ MEDIA_URL = '/media/'
 # Heroku settings
 django_heroku.settings(locals())
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_URL = 'users:;login'
 LOGOUT_URL = 'user:;logout'
@@ -152,8 +152,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 
-
-#S3 BUCKETS CONFIG
+# S3 BUCKETS CONFIG
 
 AWS_ACCESS_KEY_ID = ' AKIAXRJJNMOLJJJRTWMX'
 AWS_SECRET_ACCESS_KEY = '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'
