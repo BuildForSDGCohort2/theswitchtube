@@ -80,6 +80,7 @@ WSGI_APPLICATION = 'theswitchmedia.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+
 DATABASES = {
     'default': {
         # mysql database
@@ -88,6 +89,7 @@ DATABASES = {
     }
 
 }
+
 
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
@@ -121,8 +123,8 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
 
+USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -132,8 +134,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+# Media root file 1
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Heroku settings
 django_heroku.settings(locals())
@@ -160,4 +163,6 @@ AWS_STORAGE_BUCKET_NAME = 'theswitch'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_S3_REGION_NAME = 'US West (Oregon)' #change to your region
+AWS_S3_SIGNATURE_VERSION = 's3v4'
 
