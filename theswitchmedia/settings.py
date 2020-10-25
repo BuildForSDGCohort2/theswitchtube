@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
+from builtins import locals
 from pathlib import Path
 import django_heroku
 import dj_database_url
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     # My Apps
     'theswitch',
     'storages',
+    'progressbarupload',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +58,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+FILE_UPLOAD_HANDLERS = (
+    "progressbarupload.uploadhandler.ProgressBarUploadHandler",
+    "django.core.files.uploadhandler.MemoryFileUploadHandler",
+    "django.core.files.uploadhandler.TemporaryFileUploadHandler",
+)
 
 ROOT_URLCONF = 'theswitchmedia.urls'
 
@@ -166,3 +174,4 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_S3_REGION_NAME = 'us-west-2' #change to your region
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 
+PROGRESSBARUPLOAD_INCLUDE_JQUERY = False
