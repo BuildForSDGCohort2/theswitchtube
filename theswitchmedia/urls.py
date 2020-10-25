@@ -24,8 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('theswitch.urls', namespace='theswitch')),
     path('', include('users.urls', namespace='users')),
-    path('progressbarupload/', include('progressbarupload.urls')),
-
+    
     path('reset_password/', auth_views.PasswordResetView.as_view(template_name='registration/password_reset.html'),
          name='reset_password'),
 
