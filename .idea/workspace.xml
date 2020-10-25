@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f084fe3-43b9-4f27-b82b-a54b7d4c20a8" name="Default Changelist" comment="">
+    <list default="true" id="7f084fe3-43b9-4f27-b82b-a54b7d4c20a8" name="Default Changelist" comment="corrections">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theswitchmedia/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/theswitchmedia/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theswitchmedia/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/theswitchmedia/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,13 +35,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theswitchmedia/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1079">
-              <caret line="151" column="23" lean-forward="true" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
+            <state relative-caret-position="280">
+              <caret line="104" column="21" lean-forward="true" selection-end-line="177" />
               <folding>
                 <element signature="e#312#321#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/theswitch/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,10 +69,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/theswitch/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+              <folding>
+                <element signature="e#37#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/newVidCategory.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -69,17 +92,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/NewVideo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="307" column="23" selection-start-line="307" selection-start-column="23" selection-end-line="307" selection-end-column="23" />
+            <state relative-caret-position="181">
+              <caret line="308" lean-forward="true" selection-start-line="308" selection-end-line="308" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theswitchmedia/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+            <state relative-caret-position="306">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#638#670#0" expanded="true" />
               </folding>
@@ -181,14 +204,12 @@
         <option value="$PROJECT_DIR$/theswitch/templates/theswitch/newcategory2.html" />
         <option value="$PROJECT_DIR$/assets/assets/js/wavesurfer.js" />
         <option value="$PROJECT_DIR$/theswitch/templates/theswitch/newAudCategory2.html" />
-        <option value="$PROJECT_DIR$/theswitch/templates/theswitch/newVidCategory.html" />
         <option value="$PROJECT_DIR$/theswitch/templates/theswitch/videocatedit.html" />
         <option value="$PROJECT_DIR$/theswitch/templates/theswitch/videoedit.html" />
         <option value="$PROJECT_DIR$/users/admin.py" />
         <option value="$PROJECT_DIR$/users/models.py" />
         <option value="$PROJECT_DIR$/users/templates/registration/edith_profilepic.html" />
         <option value="$PROJECT_DIR$/users/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/theswitch/admin.py" />
         <option value="$PROJECT_DIR$/theswitch/forms.py" />
         <option value="$PROJECT_DIR$/theswitch/templates/theswitch/audio-single.html" />
         <option value="$PROJECT_DIR$/theswitch/templates/theswitch/video-single.html" />
@@ -215,10 +236,12 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/theswitch/templates/theswitch/profile.html" />
         <option value="$PROJECT_DIR$/theswitch/models.py" />
-        <option value="$PROJECT_DIR$/theswitch/templates/theswitch/NewVideo.html" />
-        <option value="$PROJECT_DIR$/theswitch/urls.py" />
         <option value="$PROJECT_DIR$/theswitchmedia/settings.py" />
+        <option value="$PROJECT_DIR$/theswitch/admin.py" />
+        <option value="$PROJECT_DIR$/theswitch/templates/theswitch/newVidCategory.html" />
+        <option value="$PROJECT_DIR$/theswitch/templates/theswitch/NewVideo.html" />
         <option value="$PROJECT_DIR$/theswitchmedia/urls.py" />
+        <option value="$PROJECT_DIR$/theswitch/urls.py" />
       </list>
     </option>
   </component>
@@ -241,6 +264,11 @@
             <path>
               <item name="theswitchtube" type="b2602c69:ProjectViewProjectNode" />
               <item name="theswitchtube" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="theswitchtube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theswitchtube" type="462c0819:PsiDirectoryNode" />
+              <item name="theswitch" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="theswitchtube" type="b2602c69:ProjectViewProjectNode" />
@@ -376,21 +404,7 @@
       <workItem from="1603569564258" duration="1049000" />
       <workItem from="1603572082026" duration="1834000" />
       <workItem from="1603574162043" duration="317000" />
-      <workItem from="1603630577385" duration="902000" />
-    </task>
-    <task id="LOCAL-00004" summary="corrections and update">
-      <created>1598093848430</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1598093848430</updated>
-    </task>
-    <task id="LOCAL-00005" summary="corrections and update">
-      <created>1598094624266</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1598094624266</updated>
+      <workItem from="1603630577385" duration="1657000" />
     </task>
     <task id="LOCAL-00006" summary="corrections and update">
       <created>1598100616315</created>
@@ -721,13 +735,27 @@
       <option name="project" value="LOCAL" />
       <updated>1603573128857</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="corrections">
+      <created>1603631686794</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1603631686796</updated>
+    </task>
+    <task id="LOCAL-00054" summary="corrections">
+      <created>1603632068414</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1603632068414</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers>
       <GitHub url="https://github.com" />
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="465705000" />
+    <option name="totallyTimeSpent" value="466460000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -889,16 +917,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/runtime.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/theswitch/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/forms/models.py" />
     <entry file="file://$PROJECT_DIR$/users/templates/registration/register_extend.html">
@@ -1138,13 +1156,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/newVidCategory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4641">
@@ -1181,39 +1192,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theswitchmedia/settings.py">
+    <entry file="file://$PROJECT_DIR$/theswitch/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1079">
-          <caret line="151" column="23" lean-forward="true" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#312#321#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/newVidCategory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/NewVideo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="308" lean-forward="true" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theswitchmedia/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#638#670#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/theswitch/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        <state relative-caret-position="391">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding>
             <element signature="e#37#74#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theswitch/templates/theswitch/NewVideo.html">
+    <entry file="file://$PROJECT_DIR$/theswitchmedia/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="307" column="23" selection-start-line="307" selection-start-column="23" selection-end-line="307" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/theswitchmedia/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+        <state relative-caret-position="280">
+          <caret line="104" column="21" lean-forward="true" selection-end-line="177" />
           <folding>
-            <element signature="e#638#670#0" expanded="true" />
+            <element signature="e#312#321#0" expanded="true" />
           </folding>
         </state>
       </provider>
