@@ -7,6 +7,7 @@ from . import views
 app_name = 'theswitch'
 
 urlpatterns = [
+    path('progressbarupload/', include('progressbarupload.urls')),
     path('', views.homepage, name='homepage'),
     path('home', views.home, name='home'),
     path('video/<int:video_id>', views.singlevideo, name='singelevid'),
