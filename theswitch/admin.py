@@ -8,3 +8,9 @@ admin.site.register(AudioCategory)
 admin.site.register(AudioPost)
 admin.site.register(VideoComment)
 admin.site.register(AudioComment)
+
+
+class MyAwesomeModelWithFiles(admin.ModelAdmin):
+    change_form_template = 'progressbarupload/change_form.html'
+    add_form_template = 'progressbarupload/change_form.html'
+
