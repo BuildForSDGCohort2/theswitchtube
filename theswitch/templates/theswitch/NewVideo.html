@@ -1,6 +1,5 @@
 {% load static %}
 {% load bootstrap4 %}
-{% load progress_bar %}
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -12,7 +11,6 @@
     <title>The Switch Video Upload</title>
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
-    {% progress_bar_media %}
 </head>
 
 <body class="sidebar-mini sidebar-collapse theme-dark  sidebar-expanded-on-hover has-preloader" style="display: none;">
@@ -304,8 +302,6 @@
                 <form action="{% url 'theswitch:videopost' %}" method="post" class="form" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% bootstrap_form form %}
-
-                    {% progress_bar %}
 
                     {% buttons %}
                         <button name="submit" class="btn btn-primary">Add Video</button>
