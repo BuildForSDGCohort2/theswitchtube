@@ -56,9 +56,9 @@ def singlevideo(request, video_id):
     # Get Likes and Count
     stuff = get_object_or_404(VideoPost, id=video_id)
     total_likes = stuff.total_likes()
-    liked = True
+    liked = False
     if stuff.likes.filter(id=request.user.id).exists():
-        liked = False
+        liked = True
 
     context = {'video': video, 'video5': video_5, 'videos': videos, 'total_likes': total_likes,
                'liked': liked, 'form': form, 'comment': comment}
@@ -110,7 +110,7 @@ def music(request):
     musics = AudioPost.objects.all().order_by('-date')
 
     # numbers of post by page
-    pages = Paginator(musics, 4)
+    pages = Paginator(musics, 8)
 
     # Get the page number
     page_number = request.GET.get('page')
